@@ -24,16 +24,18 @@ export default {
     return {
       items: items,
       selectItems: items,
-      sortKey: "",
-      mess: "",
     };
   },
   computed: {
     select() {
       //親コンポーネントでタイプを指定して呼び出す
-      let tests = this.selectItems;
-      let testlist = tests.filter((x) => x.type == this.type);
-      return testlist;
+      if (this.type == "") {
+        return items;
+      } else {
+        let tests = this.selectItems;
+        let testlist = tests.filter((x) => x.type == this.type); //ここのtypeはpropsで指定している
+        return testlist;
+      }
     },
   },
 };
@@ -41,10 +43,6 @@ export default {
 
 <style scoped>
 #main {
-  grid-column-start: 2;
-  grid-column-start: auto;
-  grid-row-start: 2;
-  grid-row-end: 3;
   background-color: #fdfbf6;
 }
 #items {

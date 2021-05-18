@@ -14,12 +14,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.foods {
-  grid-column-start: 2;
-  grid-column-start: auto;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  background-color: #fffaf0;
-}
-</style>
+<style scoped></style>
