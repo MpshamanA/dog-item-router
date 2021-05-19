@@ -13,8 +13,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-.fashion {
-  background-color: aqua;
-}
-</style>
+<style scoped></style>

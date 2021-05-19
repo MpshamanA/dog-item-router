@@ -1,12 +1,13 @@
 <template>
   <div class="home">
-    <Main type />
+    <Main type="" />
   </div>
 </template>
 
 <script>
 import Main from "../assets/items.json";
 export default {
+  name: "Home",
   components: {
     Main,
   },
