@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Main from "../assets/items.json";
+import Main from "../components/main";
 export default {
   name: "Home",
   components: {

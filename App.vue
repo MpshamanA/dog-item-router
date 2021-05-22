@@ -1,8 +1,12 @@
 <template>
   <div id="app">
     <Header class="header" />
-    <Side class="sidebar-area" />
-    <div class="scafold-wrapper text-center">
+    <Side class="sidebar-area" @click="toggle()" />
+    <!-- 要素をフェードインさせる -->
+    <div
+      class="scafold-wrapper"
+      :class="{ fedeIn: classSwitch, fedeIn2: !classSwitch }"
+    >
       <router-view />
     </div>
   </div>
@@ -39,6 +43,16 @@ export default {
     Header,
     Side,
   },
+  data() {
+    return {
+      classSwitch: true,
+    };
+  },
+  methods: {
+    toggle() {
+      this.classSwitch = !this.classSwitch;
+    },
+  },
 };
 </script>
 
@@ -65,11 +79,31 @@ export default {
   /* display: flex; 要素を横並びにする */
   flex-direction: column; /* 要素の並び順の主軸を指定 上 => 下 */
   min-height: 100vh; /* 要素の高さの最小値を指定 vhはviewport(表示領域) heightの略 */
-
   /* サイドバーのwidth分だけ範囲を削除 */
   width: calc(100% - 100px);
-
   /* サイドバーで隠れるので右に寄せる */
   margin: 0 0 0 210px;
+}
+.fedeIn {
+  animation: 0.5s fadeIn;
+}
+.fedeIn2 {
+  animation: 0.5s fadeIn2;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

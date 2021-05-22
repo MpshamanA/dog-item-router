@@ -7,7 +7,7 @@
           <router-link to="/" class="sidebar-link">home</router-link>
         </p>
         <p class="hover-color">
-          <router-link to="/items" class="sidebar-link">アイテム</router-link>
+          <router-link to="/items" class="sidebar-link">グッズ</router-link>
         </p>
         <p class="hover-color">
           <router-link to="/foods" class="sidebar-link">フード</router-link>
@@ -45,6 +45,7 @@
   font-size: 15px;
   padding: 15px 0;
   width: 100%;
+  text-decoration: none;
 }
 .sidebar-link:hover {
   color: #333; /* マウスがリンクに乗った時に背景色を変更 */

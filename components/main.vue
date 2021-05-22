@@ -3,7 +3,6 @@
     <div id="items" v-for="item in select" :key="item.id">
       <img :src="item.path" alt="画像" />
       <p>¥:{{ item.value }}</p>
-      <p>種類:{{ item.type }}</p>
       <button>
         <a :href="item.link" target="_blank" rel="noopener noreferrer"
           >購入先</a
@@ -11,18 +10,6 @@
       </button>
     </div>
   </main>
-  <!-- <main v-if="!sort" id="main">
-    <div id="items" v-for="item in select" :key="item.id">
-      <img :src="item.path" alt="画像" />
-      <p>¥:{{ item.value }}</p>
-      <p>種類:{{ item.type }}</p>
-      <button>
-        <a :href="item.link" target="_blank" rel="noopener noreferrer"
-          >購入先</a
-        >
-      </button>
-    </div>
-  </main> -->
 </template>
 
 <script>
@@ -44,6 +31,7 @@ export default {
   },
   computed: {
     select() {
+      //HOME画面では全体の表示 データが増えたら件数指定して表示
       //親コンポーネントでタイプを指定して呼び出す
       if (this.type == "") {
         return this.items;
