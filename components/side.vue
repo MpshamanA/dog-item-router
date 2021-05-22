@@ -41,12 +41,17 @@
 
 .sidebar-link {
   display: block;
-  color: #333; /* リンクの文字色を白に */
+  color: #777;
   font-size: 15px;
   padding: 15px 0;
   width: 100%;
 }
 .sidebar-link:hover {
-  background-color: #eee; /* マウスがリンクに乗った時に背景色を変更 */
+  color: #333; /* マウスがリンクに乗った時に背景色を変更 */
+}
+
+.router-link-exact-active {
+  background-color: #ddd;
+  color: #333; /* マウスがリンクに乗った時に背景色を変更 */
 }
 </style>

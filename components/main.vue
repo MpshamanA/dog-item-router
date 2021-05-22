@@ -30,8 +30,10 @@ import items from "../assets/items.json";
 export default {
   name: "side",
   props: {
-    type: String,
-    //sort: Boolean,
+    type: {
+      type: String,
+      default: "",
+    },
   },
   data() {
     return {
